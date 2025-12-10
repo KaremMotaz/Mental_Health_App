@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/features/auth/views/login_view.dart';
-import 'package:mental_health_app/features/auth/views/register_view.dart';
-import 'package:mental_health_app/features/auth/views/start_view.dart';
+import 'package:mental_health_app/features/auth/presentation/views/login_view.dart';
+import 'package:mental_health_app/features/auth/presentation/views/register_view.dart';
+import 'package:mental_health_app/features/auth/presentation/views/start_view.dart';
 import 'package:mental_health_app/features/onboarding/onboarding_view.dart';
 import 'routes.dart';
 
