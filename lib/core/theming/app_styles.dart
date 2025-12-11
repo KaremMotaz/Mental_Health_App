@@ -11,8 +11,8 @@ abstract class AppStyles {
     fontSize: 22,
     fontWeight: FontWeightHelper.bold,
   );
-  static const TextStyle semiBold15 = TextStyle(
-    fontSize: 15,
+  static const TextStyle semiBold17 = TextStyle(
+    fontSize: 17,
     fontWeight: FontWeightHelper.semiBold,
   );
   static const TextStyle medium15 = TextStyle(

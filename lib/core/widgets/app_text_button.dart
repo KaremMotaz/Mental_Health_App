@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_inner_shadow/flutter_inner_shadow.dart';
+import 'package:mental_health_app/core/theming/app_colors.dart';
 import '../theming/app_styles.dart';
 
 class AppTextButton extends StatelessWidget {
@@ -6,70 +8,82 @@ class AppTextButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     this.buttonText,
-    this.textStyle,
-    this.borderRadius,
-    this.backgroundColor,
-    this.horizontalPadding,
-    this.verticalPadding,
-    this.buttonWidth,
-    this.buttonHeight,
-    this.borderColor,
     this.child,
-    this.borderWidth,
+    this.shadowColor,
+    this.withGradient = true,
   });
   final String? buttonText;
-  final TextStyle? textStyle;
   final VoidCallback onPressed;
-  final double? borderRadius;
-  final Color? backgroundColor;
-  final Color? borderColor;
-  final double? horizontalPadding;
-  final double? verticalPadding;
-  final double? buttonWidth;
-  final double? buttonHeight;
   final Widget? child;
-  final double? borderWidth;
+  final Color? shadowColor;
+  final bool? withGradient;
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      style: ButtonStyle(
-        shape: WidgetStatePropertyAll<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 12),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        boxShadow: [
+          BoxShadow(
+            color: shadowColor ?? AppColors.brandGreen,
+            blurRadius: 0,
+            offset: Offset(0, 0),
+            spreadRadius: 2,
+            blurStyle: BlurStyle.normal,
           ),
-        ),
-        side: WidgetStatePropertyAll<BorderSide>(
-          BorderSide(
-            color: borderColor ?? Colors.white,
-            width: borderWidth ?? 1,
+          BoxShadow(
+            color:
+                shadowColor ??
+                Color(0xff0B1324).withAlpha((255 * 0.32).toInt()),
+            blurRadius: 3,
+            offset: Offset(0, 4),
+            spreadRadius: 0,
+            blurStyle: BlurStyle.normal,
           ),
-        ),
-        backgroundColor: WidgetStatePropertyAll<Color>(
-          backgroundColor ?? Colors.green,
-        ),
-        padding: WidgetStatePropertyAll<EdgeInsets>(
-          EdgeInsets.symmetric(
-            horizontal: horizontalPadding ?? 12,
-            vertical: verticalPadding ?? 14,
-          ),
-        ),
-        minimumSize: WidgetStatePropertyAll(
-          Size(buttonWidth ?? 0, buttonHeight ?? 55),
-        ),
-        maximumSize: buttonWidth != null
-            ? WidgetStatePropertyAll(Size(buttonWidth!, buttonHeight ?? 55))
-            : null,
+        ],
       ),
-
-      child:
-          child ??
-          Text(
-            buttonText ?? "",
-            style:
-                textStyle ?? AppStyles.semiBold15.copyWith(color: Colors.white),
+      child: InnerShadow(
+        shadows: [
+          Shadow(
+            color: Colors.white.withAlpha((255 * 0.6).toInt()),
+            offset: const Offset(0, 2),
+            blurRadius: 3,
           ),
+        ],
+        child: Material(
+          color: Colors.transparent,
+          child: Ink(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              gradient: withGradient == true
+                  ? LinearGradient(
+                      colors: [AppColors.lightGreen, AppColors.brandGreen],
+                      stops: const [0.0, 0.75],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )
+                  : null,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(30),
+              onTap: onPressed,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 12,
+                  horizontal: 24,
+                ),
+                child:
+                    child ??
+                    Text(
+                      buttonText ?? 'Continue',
+                      style: AppStyles.semiBold17.copyWith(color: Colors.white),
+                    ),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

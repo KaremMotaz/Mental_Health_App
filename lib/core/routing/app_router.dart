@@ -1,4 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:mental_health_app/features/app/privacy_policy_view.dart';
+import 'package:mental_health_app/features/app/terms_and_conditions_view.dart';
 import 'package:mental_health_app/features/auth/presentation/views/login_view.dart';
 import 'package:mental_health_app/features/auth/presentation/views/register_view.dart';
 import 'package:mental_health_app/features/auth/presentation/views/start_view.dart';
@@ -24,6 +26,14 @@ abstract class AppRouter {
         GoRoute(
           path: Routes.onboardingView,
           builder: (context, state) => const OnboardingView(),
+        ),
+        GoRoute(
+          path: Routes.termsAndConditionsView,
+          builder: (context, state) => const TermsAndConditionsView(),
+        ),
+        GoRoute(
+          path: Routes.privacyPolicyView,
+          builder: (context, state) => const PrivacyPolicyView(),
         ),
       ],
     );
