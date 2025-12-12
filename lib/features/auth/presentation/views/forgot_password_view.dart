@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/forgot_password/forgot_password_form.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+
+class ForgotPasswordView extends StatelessWidget {
+  const ForgotPasswordView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              SizedBox(height: 80),
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  "Forget Password",
+                  style: AppStyles.medium15.copyWith(color: AppColors.brandGreen),
+                ),
+              ),
+              const SizedBox(height: 15),
+              Expanded(child: ForgotPasswordForm()),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

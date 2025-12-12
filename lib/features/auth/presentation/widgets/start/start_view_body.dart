@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:mental_health_app/core/theming/app_assets.dart';
 import 'package:mental_health_app/core/theming/app_colors.dart';
 import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/login_with_email_button.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/login_with_facebook_button.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/login_with_google_button.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/or_divider.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/terms_and_conditions.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/start/login_with_email_button.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/start/login_with_facebook_button.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/start/login_with_google_button.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/start/or_divider.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/start/terms_and_conditions.dart';
 
 class StartViewBody extends StatelessWidget {
   const StartViewBody({super.key});

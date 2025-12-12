@@ -4,4 +4,5 @@ class AppAssets {
   static const String googleIcon = 'assets/svgs/google.svg';
   static const String appleIcon = 'assets/svgs/apple.svg';
   static const String facebookIcon = 'assets/svgs/facebook.svg';
+  static const String authIcon = 'assets/svgs/auth_icon.svg';
 }

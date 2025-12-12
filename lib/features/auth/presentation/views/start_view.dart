@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/start_view_body.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/start/start_view_body.dart';
 
 class StartView extends StatelessWidget {
   const StartView({super.key});
