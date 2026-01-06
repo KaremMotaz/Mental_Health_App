@@ -6,4 +6,6 @@ class AppAssets {
   static const String facebookIcon = 'assets/svgs/facebook.svg';
   static const String authIcon = 'assets/svgs/auth_icon.svg';
   static const String passwordIcon = 'assets/svgs/password_icon.svg';
+  static const String welcomeBackground = 'assets/images/welcome.png';
+  static const String arrowRight = 'assets/svgs/arrow_right.svg';
 }

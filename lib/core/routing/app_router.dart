@@ -5,13 +5,14 @@ import 'package:mental_health_app/features/auth/presentation/views/forgot_passwo
 import 'package:mental_health_app/features/auth/presentation/views/login_view.dart';
 import 'package:mental_health_app/features/auth/presentation/views/register_view.dart';
 import 'package:mental_health_app/features/auth/presentation/views/start_view.dart';
-import 'package:mental_health_app/features/onboarding/onboarding_view.dart';
+import 'package:mental_health_app/features/home/presentation/views/home_view.dart';
+import 'package:mental_health_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'routes.dart';
 
 abstract class AppRouter {
   static GoRouter createRouter() {
     return GoRouter(
-      initialLocation: Routes.loginView,
+      initialLocation: Routes.onboardingView,
       routes: [
         GoRoute(
           path: Routes.startView,
@@ -40,6 +41,10 @@ abstract class AppRouter {
         GoRoute(
           path: Routes.forgotPasswordView,
           builder: (context, state) => const ForgotPasswordView(),
+        ),
+        GoRoute(
+          path: Routes.homeView,
+          builder: (context, state) => const HomeView(),
         ),
       ],
     );

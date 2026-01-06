@@ -7,6 +7,7 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
+  dots_indicator: ^4.0.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
@@ -38,4 +39,3 @@ flutter:
       fonts:
         - asset: assets/fonts/Nunito/Nunito-ExtraBold.ttf
           weight: 800
-        
