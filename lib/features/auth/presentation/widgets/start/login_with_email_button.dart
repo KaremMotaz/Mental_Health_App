@@ -19,7 +19,7 @@ class LoginWithEmailButton extends StatelessWidget {
           const SizedBox(width: 10),
           Text(
             'Log in with email',
-            style: AppStyles.semiBold17.copyWith(
+            style: AppStyles.pPlayful.copyWith(
               color: Colors.white,
               shadows: [
                 Shadow(

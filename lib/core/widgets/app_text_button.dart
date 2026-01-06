@@ -77,7 +77,19 @@ class AppTextButton extends StatelessWidget {
                     child ??
                     Text(
                       buttonText ?? 'Continue',
-                      style: AppStyles.semiBold17.copyWith(color: Colors.white),
+                      style: AppStyles.pPlayful.copyWith(
+                        color: Colors.white,
+                        shadows: [
+                          Shadow(
+                            color: Color(
+                              0xff0B1324,
+                            ).withAlpha((255 * 0.24).toInt()),
+                            offset: Offset(0, 2),
+                            blurRadius: 4,
+                          ),
+                        ],
+                      ),
+                      textAlign: TextAlign.center,
                     ),
               ),
             ),

@@ -27,3 +27,15 @@ flutter:
     - assets/svgs/
     - assets/images/
     - assets/logo/
+
+  fonts:
+    - family: SFPro
+      fonts:
+        - asset: assets/fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF
+          weight: 500
+
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito/Nunito-ExtraBold.ttf
+          weight: 800
+        

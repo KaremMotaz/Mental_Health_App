@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mental_health_app/core/routing/routes.dart';
 import 'package:mental_health_app/core/widgets/app_text_button.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/login/create_an_account.dart';
+import 'package:mental_health_app/features/auth/presentation/widgets/login/email_text_field.dart';
 import 'forgot_password.dart';
 import 'password_text_field.dart';
 
@@ -28,20 +30,30 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 55),
-          PasswordTextField(passwordController: passwordController),
-          ForgotPassword(),
-          SizedBox(height: 40),
-          AppTextButton(
-            onPressed: () {
-              validateThenLogin(context);
-            },
-            buttonText: "Login",
-          ),
-        ],
+      child: Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            EmailTextField(emailController: emailController),
+            SizedBox(height: 20),
+            PasswordTextField(passwordController: passwordController),
+            ForgotPassword(),
+            SizedBox(height: 20),
+            Spacer(),
+            SizedBox(
+              width: double.infinity,
+              child: AppTextButton(
+                onPressed: () {
+                  validateThenLogin(context);
+                },
+                buttonText: "Login",
+              ),
+            ),
+            SizedBox(height: 20),
+            CreateAnAccount(),
+            SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mental_health_app/core/helpers/validate_password.dart';
+import 'package:mental_health_app/core/theming/app_assets.dart';
 import 'package:mental_health_app/core/theming/app_colors.dart';
 import 'package:mental_health_app/core/theming/app_styles.dart';
 import 'package:mental_health_app/core/widgets/app_text_form_field.dart';
-
 
 class PasswordTextField extends StatefulWidget {
   final TextEditingController passwordController;
@@ -23,11 +24,25 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 3, left: 10),
-          child: Text("Password", style: AppStyles.medium15),
+          padding: const EdgeInsets.only(bottom: 8, left: 10),
+          child: Text(
+            "Password",
+            style: AppStyles.p.copyWith(color: AppColors.bodyGray),
+          ),
         ),
         AppTextFormField(
           hintText: "Enter Your Password",
+          prefixIcon: Padding(
+            padding: const EdgeInsets.only(left: 12, right: 4),
+            child: SvgPicture.asset(
+              AppAssets.passwordIcon,
+              height: 22,
+              colorFilter: const ColorFilter.mode(
+                AppColors.brandGreen,
+                BlendMode.srcIn,
+              ),
+            ),
+          ),
           isObscureText: isPasswordObscureText,
           controller: widget.passwordController,
           suffixIcon: IconButton(

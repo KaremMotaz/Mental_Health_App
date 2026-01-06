@@ -13,10 +13,7 @@ class OrDivider extends StatelessWidget {
       children: [
         CustomDivider(),
         const SizedBox(width: 5),
-        Text(
-          'or',
-          style: AppStyles.medium15.copyWith(color: AppColors.bodyGray),
-        ),
+        Text('or', style: AppStyles.p.copyWith(color: AppColors.bodyGray)),
         const SizedBox(width: 5),
         CustomDivider(),
       ],

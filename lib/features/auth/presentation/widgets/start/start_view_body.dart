@@ -13,9 +13,9 @@ class StartViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: SizedBox(
+        width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -26,15 +26,13 @@ class StartViewBody extends StatelessWidget {
                 children: [
                   Text(
                     'Your safe space for\nmind and soul.',
-                    style: AppStyles.extraBold26,
+                    style: AppStyles.h1,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 8),
                   Text(
                     'Guided meditations, mood tracking, and\ncommunity support — all in one app.',
-                    style: AppStyles.medium15.copyWith(
-                      color: AppColors.bodyGray,
-                    ),
+                    style: AppStyles.p.copyWith(color: AppColors.bodyGray),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 20),

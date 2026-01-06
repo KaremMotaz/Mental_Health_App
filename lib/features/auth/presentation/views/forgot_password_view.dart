@@ -19,7 +19,7 @@ class ForgotPasswordView extends StatelessWidget {
                 alignment: AlignmentDirectional.centerStart,
                 child: Text(
                   "Forget Password",
-                  style: AppStyles.medium15.copyWith(color: AppColors.brandGreen),
+                  style: AppStyles.p.copyWith(color: AppColors.brandGreen),
                 ),
               ),
               const SizedBox(height: 15),

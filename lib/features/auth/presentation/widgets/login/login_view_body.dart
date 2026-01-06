@@ -9,21 +9,17 @@ class LoginViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SingleChildScrollView(
-        child: SizedBox(
-          width: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 32),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(height: 169),
-                SvgPicture.asset(AppAssets.authIcon, width: 246, height: 235),
-                SizedBox(height: 205),
-                LoginFormWidget(),
-              ],
-            ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 32),
+        child: Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 80),
+              SvgPicture.asset(AppAssets.authIcon, width: 90, height: 90),
+              SizedBox(height: 120),
+              LoginFormWidget(),
+            ],
           ),
         ),
       ),

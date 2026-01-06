@@ -3,28 +3,51 @@ import 'package:flutter/material.dart';
 import 'font_weight_helper.dart';
 
 abstract class AppStyles {
-  static const TextStyle extraBold26 = TextStyle(
+  // h1
+  static const TextStyle h1 = TextStyle(
     fontSize: 26,
     fontWeight: FontWeightHelper.extraBold,
+    fontFamily: "Nunito",
+    letterSpacing: -1,
   );
-  static const TextStyle bold22 = TextStyle(
-    fontSize: 22,
-    fontWeight: FontWeightHelper.bold,
+  // h2
+  static const TextStyle h2 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeightHelper.extraBold,
+    fontFamily: "Nunito",
+    letterSpacing: -0.2,
   );
-  static const TextStyle regular16 = TextStyle(
+  // h3
+  static const TextStyle h3 = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeightHelper.regular,
+    fontWeight: FontWeightHelper.extraBold,
+    fontFamily: "Nunito",
+    letterSpacing: -0.2,
   );
-  static const TextStyle semiBold17 = TextStyle(
-    fontSize: 17,
-    fontWeight: FontWeightHelper.semiBold,
+  // p-playful
+  static const TextStyle pPlayful = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeightHelper.extraBold,
+    fontFamily: "Nunito",
+    letterSpacing: -0.2,
   );
-  static const TextStyle medium15 = TextStyle(
+  // p
+  static const TextStyle p = TextStyle(
     fontSize: 15,
     fontWeight: FontWeightHelper.medium,
+    fontFamily: "SFPro",
   );
-  static const TextStyle medium12 = TextStyle(
+  // s-playful
+  static const TextStyle sPlayful = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeightHelper.extraBold,
+    fontFamily: "Nunito",
+    letterSpacing: -0.2,
+  );
+  // s
+  static const TextStyle s = TextStyle(
     fontSize: 12,
     fontWeight: FontWeightHelper.medium,
+    fontFamily: "SFPro",
   );
 }
