@@ -1,4 +1,5 @@
 class AppAssets {
+  // Icons
   static const String emailIcon = 'assets/svgs/email.svg';
   static const String googleIcon = 'assets/svgs/google.svg';
   static const String appleIcon = 'assets/svgs/apple.svg';
@@ -33,6 +34,7 @@ class AppAssets {
   static const String slidersHorizontalIcon =
       'assets/svgs/sliders_horizontal.svg';
 
+  // Images
   static const String start = 'assets/images/start.png';
   static const String welcomeBackground = 'assets/images/welcome.png';
   static const String veryBad = 'assets/images/v_bad.png';
@@ -63,4 +65,37 @@ class AppAssets {
   static const String sleep = 'assets/images/sleep.png';
   static const String somethingElse = 'assets/images/something_else.png';
   static const String premiumCheckIcon = 'assets/images/premium_check.png';
+
+  // Mock Images
+  static const String avatar1 = 'assets/mock_images/avatar1.jpg';
+  static const String avatar2 = 'assets/mock_images/avatar2.jpg';
+  static const String avatar3 = 'assets/mock_images/avatar3.jpg';
+  static const String avatar4 = 'assets/mock_images/avatar4.jpg';
+  static const String category1 = 'assets/mock_images/category1.jpg';
+  static const String category2 = 'assets/mock_images/category2.jpg';
+  static const String category3 = 'assets/mock_images/category3.jpg';
+  static const String category4 = 'assets/mock_images/category4.jpg';
+  static const String commentImg1 = 'assets/mock_images/comment_img1.jpg';
+  static const String commentImg2 = 'assets/mock_images/comment_img2.jpg';
+  static const String commentImg3 = 'assets/mock_images/comment_img3.jpg';
+  static const String doctor1 = 'assets/mock_images/doctor1.jpg';
+  static const String doctor2 = 'assets/mock_images/doctor2.jpg';
+  static const String doctor3 = 'assets/mock_images/doctor3.jpg';
+  static const String meditation1 = 'assets/mock_images/meditation1.jpg';
+  static const String meditation2 = 'assets/mock_images/meditation2.jpg';
+  static const String meditation3 = 'assets/mock_images/meditation3.jpg';
+  static const String meditation4 = 'assets/mock_images/meditation4.jpg';
+  static const String newArrival1 = 'assets/mock_images/new_arrival1.jpg';
+  static const String newArrival2 = 'assets/mock_images/new_arrival2.jpg';
+  static const String newArrival3 = 'assets/mock_images/new_arrival3.jpg';
+  static const String newArrival4 = 'assets/mock_images/new_arrival4.jpg';
+  static const String routine1 = 'assets/mock_images/routine1.jpg';
+  static const String routine2 = 'assets/mock_images/routine2.jpg';
+  static const String routine3 = 'assets/mock_images/routine3.jpg';
+  static const String routine4 = 'assets/mock_images/routine4.jpg';
+  static const String situation1 = 'assets/mock_images/situation1.jpg';
+  static const String situation2 = 'assets/mock_images/situation2.jpg';
+  static const String situation3 = 'assets/mock_images/situation3.jpg';
+  static const String situation4 = 'assets/mock_images/situation4.jpg';
+  static const String situation5 = 'assets/mock_images/situation5.jpg';
 }
