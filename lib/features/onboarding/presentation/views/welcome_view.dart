@@ -42,7 +42,7 @@ class WelcomeView extends StatelessWidget {
                     children: [
                       Text("Continue", style: AppStyles.pPlayful),
                       SizedBox(width: 8),
-                      SvgPicture.asset(AppAssets.arrowRight, width: 20),
+                      SvgPicture.asset(AppAssets.arrowRightIcon, width: 20),
                     ],
                   ),
                 ),
