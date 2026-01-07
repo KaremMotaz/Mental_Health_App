@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/features/home/presentation/views/home_view.dart';
-import 'package:mental_health_app/features/onboarding/presentation/views/questionnaire_view.dart';
-import 'package:mental_health_app/features/onboarding/presentation/views/welcome_view.dart';
-import 'package:mental_health_app/features/onboarding/presentation/widgets/custom_dots_indicator.dart';
+import '../../../home/presentation/views/home_view.dart';
+import 'questionnaire_view.dart';
+import 'welcome_view.dart';
+import '../widgets/custom_dots_indicator.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
 
   @override
-  _OnboardingViewState createState() => _OnboardingViewState();
+  State<OnboardingView> createState() => _OnboardingViewState();
 }
 
 class _OnboardingViewState extends State<OnboardingView> {

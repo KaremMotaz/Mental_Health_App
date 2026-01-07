@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/forgot_password/forgot_password_form.dart';
+import '../widgets/forgot_password/forgot_password_form.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 

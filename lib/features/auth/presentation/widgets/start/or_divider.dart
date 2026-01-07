@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/core/widgets/custom_divider.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/app_styles.dart';
+import '../../../../../core/widgets/custom_divider.dart';
 
 class OrDivider extends StatelessWidget {
   const OrDivider({super.key});

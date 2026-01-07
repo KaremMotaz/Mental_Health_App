@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/core/routing/routes.dart';
-import 'package:mental_health_app/features/onboarding/presentation/widgets/question_widget.dart';
+import '../../../../core/routing/routes.dart';
+import '../widgets/question_widget.dart';
 
 class QuestionnaireView extends StatefulWidget {
   final Function(Map<int, String>) onFinish;
+
   const QuestionnaireView({super.key, required this.onFinish});
 
   @override
-  _QuestionnaireViewState createState() => _QuestionnaireViewState();
+  State<QuestionnaireView> createState() => _QuestionnaireViewState();
 }
 
 class _QuestionnaireViewState extends State<QuestionnaireView> {

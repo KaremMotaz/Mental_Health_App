@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inner_shadow/flutter_inner_shadow.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
+import '../theming/app_colors.dart';
 import '../theming/app_styles.dart';
 
 class AppTextButton extends StatelessWidget {

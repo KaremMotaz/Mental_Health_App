@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/core/routing/routes.dart';
-import 'package:mental_health_app/core/widgets/app_text_button.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/login/create_an_account.dart';
-import 'package:mental_health_app/features/auth/presentation/widgets/login/email_text_field.dart';
+
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/widgets/app_text_button.dart';
+import 'create_an_account.dart';
+import 'email_text_field.dart';
 import 'forgot_password.dart';
 import 'password_text_field.dart';
 

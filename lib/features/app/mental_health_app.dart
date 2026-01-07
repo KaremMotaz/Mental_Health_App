@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/routing/app_router.dart';
-import 'package:mental_health_app/core/theming/theme_manager.dart';
+import '../../core/routing/app_router.dart';
+import '../../core/theming/theme_manager.dart';
 
 class MentalHealthApp extends StatelessWidget {
   const MentalHealthApp({super.key});
