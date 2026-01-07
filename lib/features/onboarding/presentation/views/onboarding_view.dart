@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../home/presentation/views/home_view.dart';
-import 'questionnaire_view.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mental_health_app/core/routing/routes.dart';
+import 'package:mental_health_app/features/onboarding/data/models/question_model.dart';
+import 'package:mental_health_app/features/onboarding/data/models/questionnaire_model.dart';
+import 'package:mental_health_app/features/onboarding/presentation/widgets/question_widget.dart';
 import 'welcome_view.dart';
 import '../widgets/custom_dots_indicator.dart';
 
@@ -15,24 +18,30 @@ class _OnboardingViewState extends State<OnboardingView> {
   final PageController _pageController = PageController();
   int currentPageIndex = 0;
 
-  Map<int, String> quizAnswers = {};
+  Map<String, List<String>> answers = {};
+  final List<QuestionModel> questions = onboardingQuestionnaire.questions;
 
   void nextPage() {
     _pageController.nextPage(
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
       curve: Curves.easeInOut,
     );
   }
 
-  void finishQuiz(Map<int, String> answers) {
-    setState(() {
-      quizAnswers = answers;
-    });
+  void onSelectOption(String questionId, String optionId) {
+    answers.putIfAbsent(questionId, () => []);
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (_) => HomeView()),
-    );
+    if (answers[questionId]!.contains(optionId)) {
+      answers[questionId]!.remove(optionId);
+    } else {
+      answers[questionId]!.add(optionId);
+    }
+
+    setState(() {});
+  }
+
+  void finishOnboarding() {
+    context.go(Routes.homeView, extra: answers);
   }
 
   @override
@@ -40,20 +49,34 @@ class _OnboardingViewState extends State<OnboardingView> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 60),
+          const SizedBox(height: 60),
           CustomDotsIndicator(currentPageIndex: currentPageIndex),
           Expanded(
             child: PageView(
               controller: _pageController,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               onPageChanged: (index) {
                 setState(() {
                   currentPageIndex = index;
                 });
               },
               children: [
+                ...questions.map((q) {
+                  return QuestionWidget(
+                    question: q.question,
+                    options: q.options,
+                    selectedValues: answers[q.id] ?? [],
+                    onSelect: (optionTitle) {
+                      final optionId = q.options
+                          .firstWhere((o) => o.title == optionTitle)
+                          .id;
+                      onSelectOption(q.id, optionId);
+                    },
+                    onNext: nextPage,
+                  );
+                }),
+                /// 0️⃣ Welcome
                 WelcomeView(onNext: nextPage),
-                QuestionnaireView(onFinish: finishQuiz),
               ],
             ),
           ),

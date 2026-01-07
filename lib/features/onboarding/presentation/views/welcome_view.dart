@@ -33,7 +33,7 @@ class WelcomeView extends StatelessWidget {
               ),
               Spacer(),
               AppTextButton(
-                onPressed: () {},
+                onPressed: onNext,
                 withGradient: false,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 6),

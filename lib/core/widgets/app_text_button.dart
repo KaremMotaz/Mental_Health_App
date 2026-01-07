@@ -11,21 +11,33 @@ class AppTextButton extends StatelessWidget {
     this.child,
     this.shadowColor,
     this.withGradient = true,
+    this.backgroundColor,
+    this.active = true,
+    this.horizontalPadding,
+    this.verticalPadding,
+    this.borderRadius,
   });
   final String? buttonText;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final Widget? child;
   final Color? shadowColor;
   final bool? withGradient;
+  final bool active;
+  final Color? backgroundColor;
+  final double? horizontalPadding;
+  final double? verticalPadding;
+  final double? borderRadius;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(borderRadius ?? 30),
         boxShadow: [
           BoxShadow(
-            color: shadowColor ?? AppColors.brandGreen,
+            color: active
+                ? AppColors.brandGreen
+                : shadowColor ?? AppColors.lightGrey,
             blurRadius: 0,
             offset: Offset(0, 0),
             spreadRadius: 2,
@@ -54,24 +66,27 @@ class AppTextButton extends StatelessWidget {
           color: Colors.transparent,
           child: Ink(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: backgroundColor ?? Colors.white,
               gradient: withGradient == true
                   ? LinearGradient(
-                      colors: [AppColors.lightGreen, AppColors.brandGreen],
-                      stops: const [0.0, 0.75],
+                      colors: [
+                        active ? AppColors.lightGreen : AppColors.lightGrey,
+                        active ? AppColors.brandGreen : AppColors.lightGrey,
+                      ],
+                      stops: [0.0, active ? 0.75 : 1.0],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     )
                   : null,
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(borderRadius ?? 30),
             ),
             child: InkWell(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(borderRadius ?? 30),
               onTap: onPressed,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 12,
-                  horizontal: 24,
+                padding: EdgeInsets.symmetric(
+                  vertical: verticalPadding ?? 12,
+                  horizontal: horizontalPadding ?? 24,
                 ),
                 child:
                     child ??
