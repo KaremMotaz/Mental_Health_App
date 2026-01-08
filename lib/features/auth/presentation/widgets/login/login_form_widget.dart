@@ -36,11 +36,11 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             EmailTextField(emailController: emailController),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             PasswordTextField(passwordController: passwordController),
-            ForgotPassword(),
-            SizedBox(height: 20),
-            Spacer(),
+            const ForgotPassword(),
+            const SizedBox(height: 20),
+            const Spacer(),
             SizedBox(
               width: double.infinity,
               child: AppTextButton(
@@ -50,9 +50,9 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
                 buttonText: "Login",
               ),
             ),
-            SizedBox(height: 20),
-            CreateAnAccount(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
+            const CreateAnAccount(),
+            const SizedBox(height: 20),
           ],
         ),
       ),

@@ -13,11 +13,11 @@ class TermsAndConditions extends StatelessWidget {
       textAlign: TextAlign.center,
       TextSpan(
         text: "By continuing, you agree to Zenspun's ",
-        style: TextStyle(color: AppColors.bodyGray, fontSize: 14),
+        style: const TextStyle(color: AppColors.bodyGray, fontSize: 14),
         children: [
           TextSpan(
             text: "Terms & Conditions",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 14,
               color: Color(0xff707480),
               decoration: TextDecoration.underline,
@@ -27,10 +27,10 @@ class TermsAndConditions extends StatelessWidget {
                 context.push(Routes.termsAndConditionsView);
               },
           ),
-          TextSpan(text: " and "),
+          const TextSpan(text: " and "),
           TextSpan(
             text: "Privacy Policy",
-            style: TextStyle(
+            style: const TextStyle(
               color: Color(0xff707480),
               decoration: TextDecoration.underline,
             ),
@@ -39,7 +39,7 @@ class TermsAndConditions extends StatelessWidget {
                 context.push(Routes.privacyPolicyView);
               },
           ),
-          TextSpan(text: "."),
+          const TextSpan(text: "."),
         ],
       ),
     );

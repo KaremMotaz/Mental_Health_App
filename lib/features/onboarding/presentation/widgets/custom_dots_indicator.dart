@@ -25,11 +25,11 @@ class CustomDotsIndicator extends StatelessWidget {
       dotsCount: 4,
       position: currentPageIndex.toDouble(),
       decorator: DotsDecorator(
-        spacing: EdgeInsets.symmetric(horizontal: spacing ?? 5),
+        spacing: EdgeInsets.symmetric(horizontal: spacing ?? 3),
         color: AppColors.borderButton.withAlpha((255 * 0.1).toInt()),
         activeColor: AppColors.brandGreen,
         shape: const StadiumBorder(),
-        size: unactivesize ?? Size(50, 5),
+        size: unactivesize ?? const Size(50, 5),
         activeSize: activesize ?? const Size(50, 5),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),

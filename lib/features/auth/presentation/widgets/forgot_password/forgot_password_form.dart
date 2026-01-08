@@ -26,16 +26,16 @@ class _PinInputFormState extends State<ForgotPasswordForm> {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             // PhoneTextField(phoneNumberController: phoneNumberController),
-            Spacer(),
+            const Spacer(),
             AppTextButton(
               onPressed: () {
                 validateThenVerifyCode(context);
               },
               buttonText: "Send Code",
             ),
-            Spacer(flex: 2),
+            const Spacer(flex: 2),
           ],
         ),
       ),

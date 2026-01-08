@@ -14,7 +14,7 @@ class ForgotPasswordView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               Align(
                 alignment: AlignmentDirectional.centerStart,
                 child: Text(
@@ -23,7 +23,7 @@ class ForgotPasswordView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-              Expanded(child: ForgotPasswordForm()),
+              const Expanded(child: ForgotPasswordForm()),
             ],
           ),
         ),

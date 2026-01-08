@@ -7,5 +7,6 @@ class AppColors {
   static const Color linkGray = Color(0xff707480);
   static const Color borderButton = Color(0xff07112E);
   static const Color lightGrey = Color(0xffBDBDBD);
+  static const Color shadow = Color(0xff0B1324);
   static const Color darkRed = Color(0xffdb2323);
 }

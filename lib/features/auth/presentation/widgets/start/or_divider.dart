@@ -11,11 +11,11 @@ class OrDivider extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        CustomDivider(),
+        const CustomDivider(),
         const SizedBox(width: 5),
         Text('or', style: AppStyles.p.copyWith(color: AppColors.bodyGray)),
         const SizedBox(width: 5),
-        CustomDivider(),
+        const CustomDivider(),
       ],
     );
   }

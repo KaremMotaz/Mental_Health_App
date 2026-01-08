@@ -39,16 +39,16 @@ class AppTextButton extends StatelessWidget {
                 ? AppColors.brandGreen
                 : shadowColor ?? AppColors.lightGrey,
             blurRadius: 0,
-            offset: Offset(0, 0),
+            offset: const Offset(0, 0),
             spreadRadius: 2,
             blurStyle: BlurStyle.normal,
           ),
           BoxShadow(
             color:
                 shadowColor ??
-                Color(0xff0B1324).withAlpha((255 * 0.32).toInt()),
+                const Color(0xff0B1324).withAlpha((255 * 0.32).toInt()),
             blurRadius: 3,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
             spreadRadius: 0,
             blurStyle: BlurStyle.normal,
           ),
@@ -96,10 +96,10 @@ class AppTextButton extends StatelessWidget {
                         color: Colors.white,
                         shadows: [
                           Shadow(
-                            color: Color(
+                            color: const Color(
                               0xff0B1324,
                             ).withAlpha((255 * 0.24).toInt()),
-                            offset: Offset(0, 2),
+                            offset: const Offset(0, 2),
                             blurRadius: 4,
                           ),
                         ],

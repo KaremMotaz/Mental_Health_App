@@ -5,10 +5,10 @@ abstract class ThemeManager {
   static ThemeData getAppTheme() {
     return ThemeData(
       scaffoldBackgroundColor: Colors.white,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
         centerTitle: true,
-        systemOverlayStyle: const SystemUiOverlayStyle(
+        systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Colors.black,
         ),
       ),

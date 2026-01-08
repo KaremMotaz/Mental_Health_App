@@ -16,7 +16,7 @@ class EmailTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(bottom: 8, left: 10),
+          padding: const EdgeInsets.only(bottom: 8, left: 10),
           child: Text(
             "Email",
             style: AppStyles.p.copyWith(color: AppColors.bodyGray),

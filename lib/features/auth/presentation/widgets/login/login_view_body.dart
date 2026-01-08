@@ -15,10 +15,10 @@ class LoginViewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               SvgPicture.asset(AppAssets.authIcon, width: 90, height: 90),
-              SizedBox(height: 120),
-              LoginFormWidget(),
+              const SizedBox(height: 120),
+              const LoginFormWidget(),
             ],
           ),
         ),

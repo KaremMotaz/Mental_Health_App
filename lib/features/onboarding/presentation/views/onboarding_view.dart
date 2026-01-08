@@ -3,9 +3,10 @@ import 'package:go_router/go_router.dart';
 import 'package:mental_health_app/core/routing/routes.dart';
 import 'package:mental_health_app/features/onboarding/data/models/question_model.dart';
 import 'package:mental_health_app/features/onboarding/data/models/questionnaire_model.dart';
+import 'package:mental_health_app/features/onboarding/presentation/widgets/onboarding_appbar.dart';
 import 'package:mental_health_app/features/onboarding/presentation/widgets/question_widget.dart';
+import 'package:mental_health_app/features/onboarding/presentation/widgets/questionnaire_button.dart';
 import 'welcome_view.dart';
-import '../widgets/custom_dots_indicator.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
@@ -23,6 +24,13 @@ class _OnboardingViewState extends State<OnboardingView> {
 
   void nextPage() {
     _pageController.nextPage(
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  void previousPage() {
+    _pageController.previousPage(
       duration: const Duration(milliseconds: 400),
       curve: Curves.easeInOut,
     );
@@ -49,8 +57,12 @@ class _OnboardingViewState extends State<OnboardingView> {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 60),
-          CustomDotsIndicator(currentPageIndex: currentPageIndex),
+          SizedBox(height: currentPageIndex == 0 ? 80 : 60),
+          OnboardingAppbar(
+            currentPageIndex: currentPageIndex,
+            questionsLength: questions.length,
+            previousPage: previousPage,
+          ),
           Expanded(
             child: PageView(
               controller: _pageController,
@@ -61,6 +73,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                 });
               },
               children: [
+                WelcomeView(onNext: nextPage),
                 ...questions.map((q) {
                   return QuestionWidget(
                     question: q.question,
@@ -72,14 +85,21 @@ class _OnboardingViewState extends State<OnboardingView> {
                           .id;
                       onSelectOption(q.id, optionId);
                     },
-                    onNext: nextPage,
                   );
                 }),
-                /// 0️⃣ Welcome
-                WelcomeView(onNext: nextPage),
               ],
             ),
           ),
+          if (currentPageIndex != 0) ...[
+            QuestionnaireButton(
+              currentPageIndex: currentPageIndex,
+              onNext: nextPage,
+              onFinish: finishOnboarding,
+              questionsLength: questions.length,
+              selectedValues: answers[questions[currentPageIndex - 1].id] ?? [],
+            ),
+            const SizedBox(height: 32),
+          ],
         ],
       ),
     );

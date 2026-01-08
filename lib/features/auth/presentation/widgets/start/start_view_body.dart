@@ -24,7 +24,7 @@ class StartViewBody extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Column(
                 children: [
-                  Text(
+                  const Text(
                     'Your safe space for\nmind and soul.',
                     style: AppStyles.h1,
                     textAlign: TextAlign.center,
@@ -36,15 +36,15 @@ class StartViewBody extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 20),
-                  LoginWithEmailButton(),
+                  const LoginWithEmailButton(),
                   const SizedBox(height: 20),
-                  OrDivider(),
+                  const OrDivider(),
                   const SizedBox(height: 20),
-                  LoginWithFacebookButton(),
+                  const LoginWithFacebookButton(),
                   const SizedBox(height: 20),
-                  LoginWithGoogleButton(),
+                  const LoginWithGoogleButton(),
                   const SizedBox(height: 30),
-                  TermsAndConditions(),
+                  const TermsAndConditions(),
                   const SizedBox(height: 50),
                 ],
               ),

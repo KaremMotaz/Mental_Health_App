@@ -48,7 +48,7 @@ class SelectableOptionTile extends StatelessWidget {
               shadowColor: AppColors.linkGray.withAlpha(alphaFromPercentage(6)),
               child: isSelected
                   ? SvgPicture.asset(AppAssets.checkIcon, width: 20)
-                  : SizedBox(width: 20, height: 16),
+                  : const SizedBox(width: 20, height: 16),
             ),
             const SizedBox(width: 18),
             Expanded(child: Text(text, style: AppStyles.p)),

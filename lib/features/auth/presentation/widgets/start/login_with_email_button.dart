@@ -23,8 +23,8 @@ class LoginWithEmailButton extends StatelessWidget {
               color: Colors.white,
               shadows: [
                 Shadow(
-                  color: Color(0xff0B1324).withAlpha((255 * 0.24).toInt()),
-                  offset: Offset(0, 2),
+                  color: const Color(0xff0B1324).withAlpha((255 * 0.24).toInt()),
+                  offset: const Offset(0, 2),
                   blurRadius: 4,
                 ),
               ],
