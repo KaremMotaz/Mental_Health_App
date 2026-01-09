@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
 import 'package:mental_health_app/core/theming/app_assets.dart';
 import 'package:mental_health_app/core/theming/app_colors.dart';
 import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/core/widgets/app_text_button.dart';
 
 class SelectableOptionTile extends StatelessWidget {
   final String text;
@@ -38,17 +36,10 @@ class SelectableOptionTile extends StatelessWidget {
         ),
         child: Row(
           children: [
-            AppTextButton(
-              onPressed: onTap,
-              horizontalPadding: 0,
-              verticalPadding: 1,
-              borderRadius: 6,
-              withGradient: isSelected,
-              active: isSelected,
-              shadowColor: AppColors.linkGray.withAlpha(alphaFromPercentage(6)),
-              child: isSelected
-                  ? SvgPicture.asset(AppAssets.checkIcon, width: 20)
-                  : const SizedBox(width: 20, height: 16),
+            Image.asset(
+              isSelected ? AppAssets.trueCheckBox : AppAssets.emptyCheckBox,
+              width: 24,
+              height: 24,
             ),
             const SizedBox(width: 18),
             Expanded(child: Text(text, style: AppStyles.p)),

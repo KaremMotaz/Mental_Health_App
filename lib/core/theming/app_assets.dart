@@ -4,7 +4,7 @@ class AppAssets {
   static const String googleIcon = 'assets/svgs/google.svg';
   static const String appleIcon = 'assets/svgs/apple.svg';
   static const String facebookIcon = 'assets/svgs/facebook.svg';
-  static const String authIcon = 'assets/svgs/auth_icon.svg';
+  static const String zenspunLogo = 'assets/svgs/zenspun_logo.svg';
   static const String passwordIcon = 'assets/svgs/password_icon.svg';
   static const String arrowRightIcon = 'assets/svgs/arrow_right.svg';
   static const String arrowLeftIcon = 'assets/svgs/arrow_left.svg';
@@ -65,6 +65,9 @@ class AppAssets {
   static const String sleep = 'assets/images/sleep.png';
   static const String somethingElse = 'assets/images/something_else.png';
   static const String premiumCheckIcon = 'assets/images/premium_check.png';
+  static const String emptyCheckBox = 'assets/images/empty_check_box.png';
+  static const String trueCheckBox = 'assets/images/true_check_box.png';
+  static const String premiumShadow = 'assets/images/premium_shadow.png';
 
   // Mock Images
   static const String avatar1 = 'assets/mock_images/avatar1.jpg';

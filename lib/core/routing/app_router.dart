@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:mental_health_app/features/payment/presentation/views/premium_offers_view.dart';
 import '../../features/app/privacy_policy_view.dart';
 import '../../features/app/terms_and_conditions_view.dart';
 import '../../features/auth/presentation/views/forgot_password_view.dart';
@@ -12,7 +13,7 @@ import 'routes.dart';
 abstract class AppRouter {
   static GoRouter createRouter() {
     return GoRouter(
-      initialLocation: Routes.onboardingView,
+      initialLocation: Routes.premiumOfferView,
       routes: [
         GoRoute(
           path: Routes.startView,
@@ -29,6 +30,10 @@ abstract class AppRouter {
         GoRoute(
           path: Routes.onboardingView,
           builder: (context, state) => const OnboardingView(),
+        ),
+        GoRoute(
+          path: Routes.premiumOfferView,
+          builder: (context, state) => const PremiumOffersView(),
         ),
         GoRoute(
           path: Routes.termsAndConditionsView,

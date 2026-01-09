@@ -3,6 +3,7 @@ class Routes {
   static const String loginView = '/loginView';
   static const String registerView = '/registerView';
   static const String onboardingView = '/onboardingView';
+  static const String premiumOfferView = '/premiumOfferView';
   static const String termsAndConditionsView = '/termsAndConditionsView';
   static const String privacyPolicyView = '/privacyPolicyView';
   static const String forgotPasswordView = '/forgotPasswordView';

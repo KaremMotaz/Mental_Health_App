@@ -16,7 +16,7 @@ class LoginViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 80),
-              SvgPicture.asset(AppAssets.authIcon, width: 90, height: 90),
+              SvgPicture.asset(AppAssets.zenspunLogo, width: 90, height: 90),
               const SizedBox(height: 120),
               const LoginFormWidget(),
             ],

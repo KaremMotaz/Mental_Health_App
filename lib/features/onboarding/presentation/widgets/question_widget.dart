@@ -38,7 +38,7 @@ class QuestionWidget extends StatelessWidget {
                     icon: option.icon,
                     text: option.title,
                     isSelected: isSelected,
-                    onTap: () => onSelect(option.title),
+                    onTap: () => onSelect(option.id),
                   ),
                 );
               }).toList(),
