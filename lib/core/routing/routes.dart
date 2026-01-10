@@ -7,5 +7,6 @@ class Routes {
   static const String termsAndConditionsView = '/termsAndConditionsView';
   static const String privacyPolicyView = '/privacyPolicyView';
   static const String forgotPasswordView = '/forgotPasswordView';
+  static const String subscribeView = '/subscribeView';
   static const String homeView = '/homeView';
 }

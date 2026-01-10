@@ -68,6 +68,7 @@ class AppAssets {
   static const String emptyCheckBox = 'assets/images/empty_check_box.png';
   static const String trueCheckBox = 'assets/images/true_check_box.png';
   static const String premiumShadow = 'assets/images/premium_shadow.png';
+  static const String circleCheckBox = 'assets/images/circle_check_box.png';
 
   // Mock Images
   static const String avatar1 = 'assets/mock_images/avatar1.jpg';

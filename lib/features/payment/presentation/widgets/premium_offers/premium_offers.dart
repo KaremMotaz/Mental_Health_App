@@ -29,6 +29,7 @@ class PremiumOffers extends StatelessWidget {
                       ),
                       Text(
                         offer.subtitle,
+                        overflow: TextOverflow.ellipsis,
                         style: AppStyles.pWithShadow.copyWith(
                           color: Colors.white.withAlpha(
                             alphaFromPercentage(80),

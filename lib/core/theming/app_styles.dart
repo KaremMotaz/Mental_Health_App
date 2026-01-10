@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
+import 'package:mental_health_app/core/theming/app_colors.dart';
 import 'font_weight_helper.dart';
 
 abstract class AppStyles {
-  static TextStyle h0 = TextStyle(
+  static TextStyle h0WithShadow = TextStyle(
     fontSize: 50,
     fontWeight: FontWeightHelper.extraBold,
     fontFamily: "Nunito",
     color: Colors.white,
     letterSpacing: -1,
+    height: 0.95,
     shadows: [
       Shadow(
         color: Colors.black.withAlpha(alphaFromPercentage(25)),
@@ -23,7 +25,7 @@ abstract class AppStyles {
     fontWeight: FontWeightHelper.extraBold,
     fontFamily: "Nunito",
     letterSpacing: -1,
-    height: 0.9,
+    height: 1.5,
     color: Colors.white,
     shadows: [
       Shadow(
@@ -94,15 +96,27 @@ abstract class AppStyles {
   );
   // s-playful
   static const TextStyle sPlayful = TextStyle(
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: FontWeightHelper.extraBold,
     fontFamily: "Nunito",
     letterSpacing: -0.2,
   );
   // s
   static const TextStyle s = TextStyle(
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: FontWeightHelper.medium,
     fontFamily: "SFPro",
+  );
+  static TextStyle sWithShadow = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeightHelper.medium,
+    fontFamily: "SFPro",
+    shadows: [
+      Shadow(
+        color: AppColors.shadow.withAlpha(alphaFromPercentage(70)),
+        offset: const Offset(0, 1),
+        blurRadius: 2,
+      ),
+    ],
   );
 }
