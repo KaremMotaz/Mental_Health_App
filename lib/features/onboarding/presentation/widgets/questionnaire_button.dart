@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mental_health_app/core/constants/constants.dart';
-import 'package:mental_health_app/core/theming/app_assets.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/core/widgets/app_text_button.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_text_button.dart';
 
 class QuestionnaireButton extends StatelessWidget {
   const QuestionnaireButton({

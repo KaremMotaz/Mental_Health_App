@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
-import 'package:mental_health_app/core/theming/app_assets.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/core/widgets/app_text_button.dart';
-import 'package:mental_health_app/features/payment/data/models/payment_types_model.dart';
+import '../../../../../core/helpers/alpha_from_percent.dart';
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/app_styles.dart';
+import '../../../../../core/widgets/app_text_button.dart';
+import '../../../data/models/payment_types_model.dart';
 
 class ChoosePaymentType extends StatefulWidget {
   const ChoosePaymentType({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inner_shadow/flutter_inner_shadow.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
+import '../helpers/alpha_from_percent.dart';
+import '../theming/app_colors.dart';
 import '../theming/app_styles.dart';
 
 class AppTextButton extends StatelessWidget {
@@ -50,7 +50,7 @@ class AppTextButton extends StatelessWidget {
                 BoxShadow(
                   color:
                       shadowColor ??
-                      AppColors.shadow.withAlpha(alphaFromPercentage(32)),
+                      AppColors.shadow.withAlpha(alphaFromPercentage(50)),
                   blurRadius: 3,
                   offset: const Offset(0, 2),
                   spreadRadius: 0,
@@ -62,7 +62,7 @@ class AppTextButton extends StatelessWidget {
       child: InnerShadow(
         shadows: [
           Shadow(
-            color: Colors.white.withAlpha(alphaFromPercentage(6)),
+            color: Colors.white.withAlpha(alphaFromPercentage(12)),
             offset: const Offset(0, 2),
             blurRadius: 3,
           ),

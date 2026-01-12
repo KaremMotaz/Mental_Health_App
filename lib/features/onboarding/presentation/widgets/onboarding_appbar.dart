@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/constants/constants.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/core/widgets/custom_back_button.dart';
-import 'package:mental_health_app/features/onboarding/presentation/widgets/custom_dots_indicator.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/custom_circle_button.dart';
+import 'custom_dots_indicator.dart';
 
 class OnboardingAppbar extends StatelessWidget {
   final int currentPageIndex;
@@ -26,7 +27,11 @@ class OnboardingAppbar extends StatelessWidget {
             ? MainAxisAlignment.center
             : MainAxisAlignment.spaceBetween,
         children: [
-          if (currentPageIndex != 0) CustomBackButton(onTap: previousPage),
+          if (currentPageIndex != 0)
+            CustomCircleButton(
+              onTap: previousPage,
+              icon: AppAssets.arrowLeftIcon,
+            ),
           CustomDotsIndicator(currentPageIndex: currentPageIndex),
           if (currentPageIndex != 0)
             Text(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mental_health_app/core/constants/constants.dart';
+import '../../../../core/constants/constants.dart';
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';

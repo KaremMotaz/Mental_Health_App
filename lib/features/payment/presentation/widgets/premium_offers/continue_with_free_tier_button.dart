@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
-import 'package:mental_health_app/core/routing/routes.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
+import '../../../../../core/helpers/alpha_from_percent.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/app_styles.dart';
 
 class ContinueWithFreeTierButton extends StatelessWidget {
   const ContinueWithFreeTierButton({super.key});

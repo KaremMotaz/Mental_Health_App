@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/extensions/svg_shadow_extension.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/features/payment/data/models/premium_offer_model.dart';
+import '../../../../../core/extensions/svg_shadow_extension.dart';
+import '../../../../../core/helpers/alpha_from_percent.dart';
+import '../../../../../core/theming/app_styles.dart';
+import '../../../data/models/premium_offer_model.dart';
 
 class PremiumOffers extends StatelessWidget {
   const PremiumOffers({super.key});

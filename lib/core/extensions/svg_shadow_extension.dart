@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
+import '../helpers/alpha_from_percent.dart';
 
 extension SvgAssetShadow on String {
   Widget svgWithShadow({

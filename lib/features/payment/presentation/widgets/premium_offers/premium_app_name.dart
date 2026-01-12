@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/extensions/svg_shadow_extension.dart';
-import 'package:mental_health_app/core/theming/app_assets.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
+import '../../../../../core/extensions/svg_shadow_extension.dart';
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/theming/app_styles.dart';
 
 class PremiumAppName extends StatelessWidget {
   const PremiumAppName({super.key});

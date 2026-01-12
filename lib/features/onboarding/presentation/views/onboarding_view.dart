@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/core/routing/routes.dart';
-import 'package:mental_health_app/features/onboarding/data/models/questionnaire_model.dart';
-import 'package:mental_health_app/features/onboarding/presentation/manager/onboarding_cubit/onboarding_cubit.dart';
-import 'package:mental_health_app/features/onboarding/presentation/manager/onboarding_cubit/onboarding_state.dart';
-import 'package:mental_health_app/features/onboarding/presentation/widgets/onboarding_appbar.dart';
-import 'package:mental_health_app/features/onboarding/presentation/widgets/onboarding_page_view.dart';
-import 'package:mental_health_app/features/onboarding/presentation/widgets/questionnaire_button.dart';
+import '../../../../core/routing/routes.dart';
+import '../../data/models/questionnaire_model.dart';
+import '../manager/onboarding_cubit/onboarding_cubit.dart';
+import '../manager/onboarding_cubit/onboarding_state.dart';
+import '../widgets/onboarding_appbar.dart';
+import '../widgets/onboarding_page_view.dart';
+import '../widgets/questionnaire_button.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});

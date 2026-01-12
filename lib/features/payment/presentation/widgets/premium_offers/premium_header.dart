@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/extensions/svg_shadow_extension.dart';
-import 'package:mental_health_app/core/theming/app_assets.dart';
-import 'package:mental_health_app/core/widgets/custom_close_widget.dart';
-import 'package:mental_health_app/features/payment/presentation/widgets/premium_offers/premium_app_name.dart';
+import '../../../../../core/extensions/svg_shadow_extension.dart';
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/widgets/custom_close_widget.dart';
+import 'premium_app_name.dart';
 
 class PremiumHeader extends StatelessWidget {
   final bool withClose;

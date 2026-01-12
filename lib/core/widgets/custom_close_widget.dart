@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/core/extensions/svg_shadow_extension.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
-import 'package:mental_health_app/core/theming/app_assets.dart';
+import '../extensions/svg_shadow_extension.dart';
+import '../helpers/alpha_from_percent.dart';
+import '../theming/app_assets.dart';
 
 class CustomCloseWidget extends StatelessWidget {
   const CustomCloseWidget({super.key});

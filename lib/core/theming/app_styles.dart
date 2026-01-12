@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
+import '../helpers/alpha_from_percent.dart';
+import 'app_colors.dart';
 import 'font_weight_helper.dart';
 
 abstract class AppStyles {

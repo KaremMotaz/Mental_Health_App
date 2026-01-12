@@ -1,4 +1,4 @@
-import 'package:mental_health_app/features/onboarding/data/models/option_model.dart';
+import 'option_model.dart';
 
 class QuestionModel {
   final String id;

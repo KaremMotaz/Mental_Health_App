@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import '../../../../../core/helpers/validate_password.dart';
 import '../../../../../core/theming/app_assets.dart';
 import '../../../../../core/theming/app_colors.dart';

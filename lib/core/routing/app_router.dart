@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/features/payment/presentation/views/premium_offers_view.dart';
-import 'package:mental_health_app/features/payment/presentation/views/subscribe_view.dart';
+import '../../features/payment/presentation/views/premium_offers_view.dart';
+import '../../features/payment/presentation/views/subscribe_view.dart';
 import '../../features/app/privacy_policy_view.dart';
 import '../../features/app/terms_and_conditions_view.dart';
 import '../../features/auth/presentation/views/forgot_password_view.dart';
@@ -34,7 +34,9 @@ abstract class AppRouter {
         ),
         GoRoute(
           path: Routes.premiumOfferView,
-          builder: (context, state) => const PremiumOffersView(),
+
+          builder: (context, state) =>
+              const PremiumOffersView(withClose: false),
         ),
         GoRoute(
           path: Routes.termsAndConditionsView,

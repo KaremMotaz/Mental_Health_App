@@ -1,4 +1,4 @@
-import 'package:mental_health_app/core/theming/app_assets.dart';
+import '../../../../core/theming/app_assets.dart';
 
 class PremiumOfferModel {
   final String title;

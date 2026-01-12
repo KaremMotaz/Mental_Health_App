@@ -1,6 +1,6 @@
-import 'package:mental_health_app/core/theming/app_assets.dart';
-import 'package:mental_health_app/features/onboarding/data/models/option_model.dart';
-import 'package:mental_health_app/features/onboarding/data/models/question_model.dart';
+import '../../../../core/theming/app_assets.dart';
+import 'option_model.dart';
+import 'question_model.dart';
 
 class OnboardingQuestionnaire {
   final List<QuestionModel> questions;

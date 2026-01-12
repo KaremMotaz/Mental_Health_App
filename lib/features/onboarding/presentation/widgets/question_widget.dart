@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/constants/constants.dart';
-import 'package:mental_health_app/core/theming/app_styles.dart';
-import 'package:mental_health_app/features/onboarding/data/models/option_model.dart';
-import 'package:mental_health_app/features/onboarding/presentation/widgets/selectable_option_tile.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../data/models/option_model.dart';
+import 'selectable_option_tile.dart';
 
 class QuestionWidget extends StatelessWidget {
   final String question;

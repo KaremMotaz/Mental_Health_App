@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mental_health_app/core/helpers/alpha_from_percent.dart';
-import 'package:mental_health_app/core/theming/app_assets.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
+import '../helpers/alpha_from_percent.dart';
+import '../theming/app_colors.dart';
 
-class CustomBackButton extends StatelessWidget {
-  const CustomBackButton({super.key, this.onTap});
+class CustomCircleButton extends StatelessWidget {
+  const CustomCircleButton({super.key, this.onTap, required this.icon});
   final VoidCallback? onTap;
+  final String icon;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -42,7 +42,7 @@ class CustomBackButton extends StatelessWidget {
             ),
           ],
         ),
-        child: SvgPicture.asset(AppAssets.arrowLeftIcon, width: 24),
+        child: SvgPicture.asset(icon, width: 24),
       ),
     );
   }

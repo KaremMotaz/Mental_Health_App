@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health_app/core/theming/app_assets.dart';
-import 'package:mental_health_app/core/theming/app_colors.dart';
+
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/theming/app_colors.dart';
 
 class PremiumBackground extends StatelessWidget {
   final Widget child;

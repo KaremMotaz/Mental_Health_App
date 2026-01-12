@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mental_health_app/features/onboarding/data/models/questionnaire_model.dart';
-import 'package:mental_health_app/features/onboarding/presentation/manager/onboarding_cubit/onboarding_state.dart';
+import '../../../data/models/questionnaire_model.dart';
+import 'onboarding_state.dart';
 
 class OnboardingCubit extends Cubit<OnboardingState> {
   final PageController pageController = PageController();
