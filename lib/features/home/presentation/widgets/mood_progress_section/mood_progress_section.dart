@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theming/app_styles.dart';
+import '../../../../../core/widgets/app_section_header.dart';
 
 class MoodProgressSection extends StatelessWidget {
   const MoodProgressSection({super.key});
@@ -9,7 +9,7 @@ class MoodProgressSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text("Mood Progress", style: AppStyles.h2),
+        const AppSectionHeader(title: "Mood Progress"),
         Container(),
       ],
     );

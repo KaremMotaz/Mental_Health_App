@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../core/theming/app_styles.dart';
+import '../../../../../core/widgets/app_section_header.dart';
 
 class MessageOfTheDaySection extends StatelessWidget {
   const MessageOfTheDaySection({super.key});
@@ -8,7 +8,7 @@ class MessageOfTheDaySection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text("Message of the Day", style: AppStyles.h2),
+        const AppSectionHeader(title: "Message of the Day"),
         Container(),
       ],
     );

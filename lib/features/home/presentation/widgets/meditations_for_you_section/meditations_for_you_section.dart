@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../core/theming/app_styles.dart';
+import '../../../../../core/widgets/app_section_header.dart';
 
 class MeditationsForYouSection extends StatelessWidget {
   const MeditationsForYouSection({super.key});
@@ -8,7 +8,12 @@ class MeditationsForYouSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(children: [Text("Meditations for You", style: AppStyles.h2)]),
+        const Row(
+          children: [
+            AppSectionHeader(title: "Meditations for you"),
+            Spacer(),
+          ],
+        ),
         Container(),
       ],
     );

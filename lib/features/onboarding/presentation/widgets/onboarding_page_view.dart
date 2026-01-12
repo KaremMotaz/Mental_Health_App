@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../data/models/question_model.dart';
 import '../manager/onboarding_cubit/onboarding_cubit.dart';
 import '../manager/onboarding_cubit/onboarding_state.dart';
-import '../../data/models/question_model.dart';
 import '../views/welcome_view.dart';
 import 'question_widget.dart';
 

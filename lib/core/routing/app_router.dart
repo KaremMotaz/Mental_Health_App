@@ -1,6 +1,5 @@
 import 'package:go_router/go_router.dart';
-import '../../features/payment/presentation/views/premium_offers_view.dart';
-import '../../features/payment/presentation/views/subscribe_view.dart';
+
 import '../../features/app/privacy_policy_view.dart';
 import '../../features/app/terms_and_conditions_view.dart';
 import '../../features/auth/presentation/views/forgot_password_view.dart';
@@ -9,6 +8,8 @@ import '../../features/auth/presentation/views/register_view.dart';
 import '../../features/auth/presentation/views/start_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/onboarding/presentation/views/onboarding_view.dart';
+import '../../features/payment/presentation/views/premium_offers_view.dart';
+import '../../features/payment/presentation/views/subscribe_view.dart';
 import 'routes.dart';
 
 abstract class AppRouter {
